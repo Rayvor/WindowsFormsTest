@@ -55,7 +55,7 @@ namespace WindowsFormsTest
 
                 label.Text = "Скопировано в буфер обмена";
 
-                Refresh();
+                Invalidate();
             });
 
             _timer.Stop();
@@ -71,7 +71,7 @@ namespace WindowsFormsTest
             {
                 label.Text = string.Empty;
 
-                Refresh();
+                Invalidate();
             });
 
             _timerDrawBorder.Stop();
@@ -89,7 +89,7 @@ namespace WindowsFormsTest
 
             // Сбрасываем рамку, если отжали кнопку раньше.
             _changeBorder = false;
-            Refresh();
+            Invalidate();
         }
 
         private void MainForm_Paint(object sender, PaintEventArgs e)
