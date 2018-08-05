@@ -48,7 +48,7 @@ namespace WindowsFormsTest
             // Выполняем в потоке диспатчера.
             Invoke((MethodInvoker)delegate
             {
-                if (string.IsNullOrWhiteSpace(tbInput.Text))
+                if (!string.IsNullOrWhiteSpace(tbInput.Text))
                 {
                     Clipboard.SetText(tbInput.Text, TextDataFormat.UnicodeText);
                 }
